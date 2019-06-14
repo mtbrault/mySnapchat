@@ -47,6 +47,7 @@ class Home extends Component {
             })
             .then(res => {
                 console.log(res.data);
+                this.setState({time: 10, dest: 'default', image: null})
             })
             .catch(err => {
                 console.log(err.response.data);
@@ -117,17 +118,16 @@ class Home extends Component {
                   </View>
             </View>
         )
-        console.log(listPicking);
     }
 
     render() {
         return (
           <View style={styles.container}>
               <View style={styles.imageContainer}>
-                  <TouchableOpacity style={styles.buttonContainer} onPress={this._pickImage}>
+                  <TouchableOpacity style={styles.buttonContainerSpec} onPress={this._pickImage}>
                       <Text style={styles.buttonTxt}>Sélectionnez une image</Text>
                   </TouchableOpacity>
-                  <TouchableOpacity style={styles.buttonContainer} onPress={this.disconnect}>
+                  <TouchableOpacity style={styles.buttonContainerSpec} onPress={this.disconnect}>
                       <Text style={styles.buttonTxt}>Logout</Text>
                   </TouchableOpacity>
               </View>

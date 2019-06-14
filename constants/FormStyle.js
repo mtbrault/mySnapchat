@@ -35,6 +35,11 @@ const styles = StyleSheet.create({
 	buttonContainer: {
 		backgroundColor: '#2980b9',
 		paddingVertical: 10,
+		marginBottom: 10
+	},
+	buttonContainerSpec: {
+		backgroundColor: '#2980b9',
+		paddingVertical: 10,
 		marginBottom: 10,
 		width: 200
 	},
